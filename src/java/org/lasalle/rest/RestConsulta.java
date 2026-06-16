@@ -10,6 +10,15 @@ import org.lasalle.model.Consulta;
 
 @Path("consultas")
 public class RestConsulta {
+    
+    @GET
+    @Path("getAll")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAll() throws SQLException {
+    ControllerConsulta cc = new ControllerConsulta();
+    Gson gson = new Gson();
+    return Response.ok(gson.toJson(cc.getAll())).build();
+    }
 
     @GET
     @Path("getByPaciente/{idPaciente}")

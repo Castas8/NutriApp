@@ -52,6 +52,21 @@ public class ControllerConsulta {
         connMysql.close();
         return lista;
     }
+    
+    public List<Consulta> getAll() throws SQLException {
+        String sql = "SELECT * FROM consultas ORDER BY fecha_consulta DESC";
+        ConexionMysql connMysql = new ConexionMysql();
+        Connection conn = connMysql.open();
+        PreparedStatement pstm = conn.prepareStatement(sql);
+        ResultSet rs = pstm.executeQuery();
+        List<Consulta> lista = new ArrayList<>();
+        while (rs.next()) {
+            lista.add(fill(rs));
+        }
+        rs.close();
+        connMysql.close();
+        return lista;
+    }
 
     public Consulta getById(int id) throws SQLException {
         String sql = "SELECT * FROM consultas WHERE id_consulta = ?";
