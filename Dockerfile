@@ -12,4 +12,6 @@ COPY dist/Nutri.war /opt/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
 
+ENV JAVA_TOOL_OPTIONS="--add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED -Djdk.attach.allowAttachSelf=true"
+
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
