@@ -1,9 +1,15 @@
-FROM tomcat:11.0-jdk21
+FROM eclipse-temurin:26-jdk
 
-RUN rm -rf /usr/local/tomcat/webapps/*
+RUN apt-get update && apt-get install -y wget && \
+    wget https://downloads.apache.org/tomcat/tomcat-11/v11.0.22/bin/apache-tomcat-11.0.22.tar.gz && \
+    tar xzf apache-tomcat-11.0.22.tar.gz && \
+    mv apache-tomcat-11.0.22 /opt/tomcat && \
+    rm apache-tomcat-11.0.22.tar.gz
 
-COPY dist/Nutri.war /usr/local/tomcat/webapps/ROOT.war
+RUN rm -rf /opt/tomcat/webapps/*
+
+COPY dist/Nutri.war /opt/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
 
-CMD ["catalina.sh", "run"]
+CMD ["/opt/tomcat/bin/catalina.sh", "run"]
