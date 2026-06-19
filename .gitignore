@@ -1,0 +1,11 @@
+*.xcuserdata
+*.xcuserdatad
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+Pods/
+.build/
+Package.resolved
+*.lock

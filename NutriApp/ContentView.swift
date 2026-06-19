@@ -7,18 +7,17 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+struct RootView: View {
+    @State private var showSplash = true
+    @AppStorage("isLoggedIn") private var isLoggedIn = false
 
-#Preview {
-    ContentView()
+    var body: some View {
+        if showSplash {
+            SplashView(showSplash: $showSplash)
+        } else if isLoggedIn {
+            MainTabView()
+        } else {
+            LoginView()
+        }
+    }
 }

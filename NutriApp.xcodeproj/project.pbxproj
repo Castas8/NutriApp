@@ -10,9 +10,22 @@
 		32EF452A2FCF98D000E634DD /* NutriApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		32F226352FDE3F29000CBB1F /* Exceptions for "NutriApp" folder in "NutriApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 32EF45292FCF98D000E634DD /* NutriApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		32EF452C2FCF98D000E634DD /* NutriApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				32F226352FDE3F29000CBB1F /* Exceptions for "NutriApp" folder in "NutriApp" target */,
+			);
 			path = NutriApp;
 			sourceTree = "<group>";
 		};
@@ -253,6 +266,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NutriApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Balance;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +300,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NutriApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Balance;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
